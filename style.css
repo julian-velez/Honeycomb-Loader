@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #232323;
+  }
+  
+  .honeycomb-loader {
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;
+    animation: rotate 5s linear infinite;
+  }
+  
+  .hexagon {
+    width: 50px;
+    height: 58px;
+    background-color: #fdd835;
+    margin: 4px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    animation: scaleUp 0.5s infinite alternate, colorChange 2s infinite alternate;
+    transition: transform 0.3s;
+  }
+  
+  .hexagon:hover {
+    transform: scale(1.2);
+  }
+  
+  @keyframes scaleUp {
+    to {
+      transform: scale(1.1);
+    }
+  }
+  
+  @keyframes colorChange {
+    to {
+      background-color: #e53935;
+    }
+  }
+  
+  @keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
